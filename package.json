@@ -1,0 +1,28 @@
+{
+  "proxy": "http://localhost:8080/api/v1",
+  "name": "y",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "16.16.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "ejs": "^2.7.4",
+    "express": "^4.18.1",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.11",
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.0",
+    "path": "^0.12.7"
+  },
+  "description": ""
+}

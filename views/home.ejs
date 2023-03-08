@@ -1,0 +1,176 @@
+<!-- add picture hover animation like touching 1st post an image should be diaplayed -->
+<%- include("partials/header"); -%>
+<div class="boddy" style="width:100%">
+  <style>
+td{
+  padding:20px;
+
+}
+  </style>
+
+  <table  style="margin-left:-80px"class="upt" >
+    <tr class="flex-container" style="cellspacing:40px">
+
+      <td  style="width:40%">
+        <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <!-- <img src="img_paris.jpg" alt="Paris" style="width:300px;height:200px"> -->
+      <img  class="img1" src="/images/hdcofee.jpg" alt="coffee" width="400px" height="520px">
+    </div>
+    <div class="flip-box-back">
+      <p class="texty">
+        <style>
+  @import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+</style>
+        Great mornings <br>start with the heavenly <br>aroma of coffee!!
+      </p>
+    </div>
+  </div>
+</div>
+
+    </td>
+      <td>
+  <div class="headd">
+          <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+    </style>
+      <h1 class="black-lives-matter"><b><b>Renovate Your Thoughts!</b></b></h1>
+    </div>
+  </td>
+  <td style="width:40%;margin-right:10px">
+    <div class="flip-box">
+<div class="flip-box-inner">
+<div class="flip-box-front">
+  <img class="img2"src="/images/img2.jpg" alt="coffee" width="400px" height="520px">
+</div>
+<div class="flip-box-back">
+  <p class="texty">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+</style>
+“The things we do outlast our mortality. The things we do are like monuments that people build to honor heroes after they’ve died. They’re like the pyramids that the Egyptians built to honor the pharaohs. Only instead of being made of stone, they’re made out of the memories people have of you.”
+
+  </p>
+</div>
+</div>
+</div>
+</td>
+  </tr>
+  </table>
+  <table>
+    <tr class="car">
+      <td>
+        <div class="homec">
+          <style>
+              @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+            </style>
+          <div class="hover-3">
+          <h1 class="homehead">Home</h1>
+          <p class="phead"><%- homeStartingContent -%></p>
+        </div>
+        </div>
+      </td>
+      <td>
+        <div class="btwhome">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" >
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="height: 500px">
+              <div class="carousel-item active">
+                <img src="/images/bgimg8.png" class="d-block w-100" alt="..."id="homeimg1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Memories</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/images/bgimg10.jpg" class="d-block w-100" alt="..." id="homeimg1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Happiness</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/images/bgimg12.jpg" class="d-block w-100" alt="..."id="homeimg1" >
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+      </td>
+    </tr>
+  </table>
+  
+      
+  
+<table>
+  <tr>
+    <td>
+      <div class="posty">
+        <%  posts.forEach(function(post){ %>
+          <table>
+            <tr>
+              <td>
+                <div class="postvice">
+                  <h1><%=post.title%></h1>
+                  <p>
+                  <%=post.content.substring(0, 100) + " ..."%>
+                  <a href="/posts/<%=post._id%>">Read More</a>
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <% }); %>
+      </div>
+    </td>
+    <td>
+      <div class ="contain">
+    <div class="card">
+    <img class="extraimg" src="/images/tr2.jpg" alt="">
+    <div class="intro"><h1 class="h1">Life Quotes</h1>
+     <p class="p1">"Don't judge each day by the harvest you reap but by the seeds that you plant.<br> -Robert Louis Stevenson"</p>
+    </div>
+</div>
+</div>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer"); -%>
